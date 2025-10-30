@@ -1,0 +1,7 @@
+{
+  "name": "Purchase Order AI Extractor",
+  "description": "An application to automatically extract data from purchase order images using AI, with Firebase integration for authentication and storage.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

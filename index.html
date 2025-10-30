@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase Order AI Extractor</title>
+    <link rel="icon" type="image/png" href="https://pages.megaborrj.com.br/wp-content/uploads/2025/10/megabor.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes status-glow-blue {
+        0% { box-shadow: 0 0 0px 0px rgba(59, 130, 246, 0.7); } /* blue-500 */
+        70% { box-shadow: 0 0 8px 5px rgba(59, 130, 246, 0); }
+        100% { box-shadow: 0 0 0px 0px rgba(59, 130, 246, 0); }
+      }
+      .animate-status-glow-blue { animation: status-glow-blue 1.5s ease-out; }
+
+      @keyframes status-glow-green {
+        0% { box-shadow: 0 0 0px 0px rgba(34, 197, 94, 0.7); } /* green-500 */
+        70% { box-shadow: 0 0 8px 5px rgba(34, 197, 94, 0); }
+        100% { box-shadow: 0 0 0px 0px rgba(34, 197, 94, 0); }
+      }
+      .animate-status-glow-green { animation: status-glow-green 1.5s ease-out; }
+
+      @keyframes status-glow-red {
+        0% { box-shadow: 0 0 0px 0px rgba(239, 68, 68, 0.7); } /* red-500 */
+        70% { box-shadow: 0 0 8px 5px rgba(239, 68, 68, 0); }
+        100% { box-shadow: 0 0 0px 0px rgba(239, 68, 68, 0); }
+      }
+      .animate-status-glow-red { animation: status-glow-red 1.5s ease-out; }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* New animations for UX enhancement */
+      @keyframes contentFadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .animate-content-fade-in {
+        animation: contentFadeIn 0.4s ease-out forwards;
+      }
+
+      @keyframes backdropFadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .animate-backdrop-fade-in {
+        animation: backdropFadeIn 0.3s ease-out forwards;
+      }
+
+      @keyframes modalContentFadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      .animate-modal-content-fade-in {
+        animation: modalContentFadeIn 0.3s ease-out forwards;
+      }
+
+      @keyframes row-highlight-glow {
+        0% {
+            box-shadow: 0 0 12px 6px rgba(59, 130, 246, 0.6); /* blue-500 */
+            outline: 2px solid rgba(59, 130, 246, 0.7);
+        }
+        100% {
+            box-shadow: 0 0 12px 6px rgba(59, 130, 246, 0);
+            outline: 2px solid rgba(59, 130, 246, 0);
+        }
+      }
+      .animate-row-highlight {
+        animation: row-highlight-glow 2.5s ease-out;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.4.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.25.0",
+    "uuid": "https://aistudiocdn.com/uuid@^13.0.0",
+    "react-dropzone": "https://aistudiocdn.com/react-dropzone@^14.3.8"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-100 text-slate-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
